@@ -1,0 +1,11 @@
+Collecting distribute
+  Downloading distribute-0.7.3.zip (145kB)
+Collecting setuptools>=0.7 from https://pypi.python.org/packages/3.4/s/setuptools/setuptools-12.3-py2.py3-none-any.whl#md5=31f51a38497a70efadf5ce8d4c2211ab (from distribute)
+  Downloading setuptools-12.3-py2.py3-none-any.whl (501kB)
+Installing collected packages: setuptools, distribute
+  Found existing installation: setuptools 2.2
+    Uninstalling setuptools-2.2:
+      Successfully uninstalled setuptools-2.2
+
+  Running setup.py install for distribute
+Successfully installed distribute-0.7.3 setuptools-12.3
