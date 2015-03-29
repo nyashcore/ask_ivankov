@@ -9,5 +9,5 @@ def application(environ, start_response):
 	headers = [('Content-type','text/plain')]
 	start_response(status, headers)
 
-	response = ['Hello World!\n', 'Query test : %s' % name, ' and %s' % name2]
+	response = ['Helo World!\n', 'Query test : %s' % name, ' and %s' % name2]
 	return (line.encode('utf-8') for line in response)
