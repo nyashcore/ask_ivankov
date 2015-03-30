@@ -8,16 +8,16 @@ import datetime
 
 def index(request):
 	return render(request, 'index.html', {})
-def page(request):
-	hello = 'Hello, World'
-	return render(request, 'page.html', {'hello': hello})  
-def hello(request):
-	message = request.get_host()
-	return HttpResponse(message)
-def current_datetime(request):
-	c = {}
-	c.update(csrf(request))
-	return render_to_response('current_datetime.html', c)
+def register(request):
+	return render(request, 'signup.html', {})
+def tag(request, tag):
+	return render(request, 'index.html', {'tag': tag})
+def login(request):
+	return render(request, 'login.html', {})
+def ask(request):
+	return render(request, 'ask.html', {})
+def question(request, question):
+	return render(request, 'question.html', {'question': question})
 def search(request):
 	message = ''
 	var = request.GET.getlist('one')
@@ -25,8 +25,8 @@ def search(request):
 		message += item
 		message += ' '
 	return HttpResponse(message)
-def getpost(request):
+def getpost(request, tag):
 	greeting = 'Hello, World!'
 	get_params = request.GET.items()
 	post_params = request.POST.items()
-	return render(request, 'getpost.html', {'greeting': greeting, 'get_params': get_params, 'post_params': post_params})
+	return render(request, 'getpost.html', {'tag': tag, 'greeting': greeting, 'get_params': get_params, 'post_params': post_params})

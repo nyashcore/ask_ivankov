@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block main %}
+	<div class="page-header"><h1>Registration</h1></div>
+	<p style="color: red">Sorry, this email address is already registered!</p>
+	<form action="" method="POST">
+		<label for="login">Login</label><input type="text" name="login" id="login">
+		<label for="email">Email</label><input type="text" name="email" id="email">
+		<label for="nick">NickName</label><input type="text" name="nick" id="nick">
+		<label for="pass">Password</label><input type="password" name="pass" id="pass">
+		<label for="repass">Repeat password</label><input type="password" name="repass" id="repass">
+		<label for="ava">Upload avatar</label><input type="file" name="ava" id="ava">
+		<!-- <input type="button" name="choose" id="choose" value="Choose"> -->
+		<label for="register"></label><input type="submit" name="register" id="register" value="Register!">
+	</form>
+{% endblock main %}

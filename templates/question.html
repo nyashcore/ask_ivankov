@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block main %}
+	<div>
+		<div class="question__left">
+			<img src="http://lorempixel.com/100/100">
+		</div>
+		<div class="question__right">
+			<h3>How to tra la la</h3>
+			<p style="margin-top: 9px;">Lorem pixel dolor sit amet and lalalalallalalalalalalalalalalalalalalalalalalalalalalalalalalala</p>
+			<div>Tags: <a href="/tag/trala">trala</a>, <a href="/tag/la">la</a></div>
+		</div>
+	</div>
+	<form action="">
+		{% for i in "qsd" %}
+			<div class="question row">
+				<div class="question__left">
+					<img src="http://lorempixel.com/90/90">
+				</div>
+				<div class="question__right">
+					<p style="margin-top: 9px;">Lorem pixel dolor sit amet</p>
+					<input type="checkbox" name="correct">&nbsp;Correct!
+				</div>
+			</div>
+		{% endfor %}
+		<div style="float: left; margin-top: 20px;"><textarea style="width: 613px;">Enter your answer here</textarea></div>
+		<input style="float: left;" type="submit" value="Answer">
+	</form>
+{% endblock main %}

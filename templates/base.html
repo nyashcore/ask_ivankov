@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ask Ivankov</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+ 	<link rel="stylesheet" href="/style.css">
+    <script src="/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+		<div style="height: 60px" class="navbar">
+		  <div style="height: 60px" class="navbar-inner">
+		    <div style="height: 60px" class="container">
+		    	<a style="margin-top: 10px" class="brand" href="#">Ask Ivankov</a>
+                <!-- {% if 1 %} -->
+		    	<form style="margin-top: 14px" class="navbar-search pull-left" action="/tag/">
+  					<input type="text" style="width: 350px" class="search-query" placeholder="Search" name="tag">
+				</form>
+                    <form class="navbar-button" action="/ask/">
+                        <button type="submit">ASK!</button>
+                    </form>
+                    <div class="navbar-div">Dr. Pepper</div>
+                    <img class="navbar-img" src="http://lorempixel.com/35/35">
+                <!-- {% else %} -->
+                    <a class="navbar-a" href="/login/">log in</a>
+                    <a class="navbar-a" href="/register/">register</a>
+                <!-- {% endif %} -->
+		    </div>
+		  </div>
+		</div>
+    	<div class="row">
+    		<div class="span8" id="maincol">
+                {% block main %}
+                {% endblock main %}
+    		</div>
+    		<div align="center" class="span4" id="rightcol">
+    			<h3 style="padding: 20px">Popular Tags</h3>
+    			<ul>
+    				<div style="padding: 5px">C++</div>
+    				<div style="padding: 5px">C#</div>
+    				<div style="padding: 5px">Python</div>
+    				<div style="padding: 5px">Ruby</div>
+    			</ul>
+    			<h3 style="padding: 20px">Best Members</h3>
+    			<ul>
+    				<div style="padding: 5px">Pupkin</div>
+    				<div style="padding: 5px">Petrov</div>
+    				<div style="padding: 5px">Sidorov</div>
+    				<div style="padding: 5px">Ivanov</div>
+    			</ul>
+    		</div>
+    	</div>
+    </div>
+  </body>
+</html>
