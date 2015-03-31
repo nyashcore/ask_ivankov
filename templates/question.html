@@ -1,9 +1,16 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block main %}
 	<div>
-		<div class="question__left">
+		<div align=center class="question__left">
 			<img src="http://lorempixel.com/100/100">
+												<div class="btn-toolbar">
+			  <div class="btn-group">			 
+			    <a class="btn" href="#">-</a>
+			    <a class="btn" href="#" disabled>5</a>
+			    <a class="btn" href="#">+</a>
+			  </div>
+				</div>
 		</div>
 		<div class="question__right">
 			<h3>How to tra la la</h3>
@@ -14,8 +21,15 @@
 	<form action="">
 		{% for i in "qsd" %}
 			<div class="question row">
-				<div class="question__left">
+				<div align=center class="question__left">
 					<img src="http://lorempixel.com/90/90">
+									<div class="btn-toolbar">
+			  <div class="btn-group">			 
+			    <a class="btn" href="#">-</a>
+			    <a class="btn" href="#" disabled>5</a>
+			    <a class="btn" href="#">+</a>
+			  </div>
+				</div>
 				</div>
 				<div class="question__right">
 					<p style="margin-top: 9px;">Lorem pixel dolor sit amet</p>
@@ -23,7 +37,7 @@
 				</div>
 			</div>
 		{% endfor %}
-		<div style="float: left; margin-top: 20px;"><textarea style="width: 613px;">Enter your answer here</textarea></div>
-		<input style="float: left;" type="submit" value="Answer">
+		<div style="float: left; margin-top: 20px;"><textarea style="width: 613px; height: 100px;"></textarea></div>
+		<input class="btn btn-primary" style="float: left;" type="submit" value="Answer">
 	</form>
 {% endblock main %}

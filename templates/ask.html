@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block main %}
 	<div class="page-header"><h1>New Question</h1></div>
@@ -6,6 +6,6 @@
 		<label for="title">Title</label><input style="width: 600px" type="text" name="title" id="title">
 		<label for="text">Text</label><textarea style="width: 600px; height: 100px" name="text" id="text"></textarea>
 		<label for="tags">Tags</label><input style="width: 600px" type="text" name="tags" id="tags">
-		<label for="ask"></label><input type="submit" name="ask" id="ask" value="ASK!">
+		<label for="ask"></label><input class="btn btn-primary" type="submit" name="ask" id="ask" value="ASK!">
 	</form>
 {% endblock main %}
