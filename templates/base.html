@@ -11,30 +11,41 @@
     <div class="container">
 		<div style="height: 60px" class="navbar">
 		  <div style="height: 60px" class="navbar-inner">
-		    <div style="height: 60px" class="container">
+		    <div style="height: 60px" class="row">
+                <div class="span7" style="float: left; margin-left: 0px; padding-left: 20px;">
 		    	<a style="margin-top: 10px" class="brand" href="/">Ask Ivankov</a>
-                <!-- {% if 1 %} -->
 		    	<form style="margin-top: 14px" class="navbar-search pull-left" action="/tag/">
-  					<input type="text" style="width: 350px" class="search-query" placeholder="Search" name="tag">
+  					<input type="text" style="width: 300px" class="search-query" placeholder="Search" name="tag">
 				</form>
                     <form class="navbar-button" action="/ask/">
                         <button class="btn btn-success" type="submit">ASK!</button>
                     </form>
-                    <div class="navbar-div">Dr. Pepper</div>
-                    <img class="navbar-img" src="http://lorempixel.com/35/35">
-                <!-- {% else %} -->
-                    <a class="navbar-a" href="/login/">log in</a>
-                    <a class="navbar-a" href="/register/">register</a>
-                <!-- {% endif %} -->
+                    </div>
+                {% if 1 %}
+                    <div class="span4">
+                    <div  align=center style="float: left; margin-left: 0px; margin-top: 10px;">
+                     <img src="http://lorempixel.com/35/35">
+                    <div style="float: left; margin-top: 8px; margin-right: 15px">Dr. Peppers</div></div>
+                    <div  style="float: left; margin-top: 17px; margin-left: 15px;"><a href="">Settings</a></div>
+                    <div  style="float: left; margin-top: 17px; margin-left: 15px;"><a href="">Logout</a></div>
+                    </div>
+                {% else %}
+                    <div class="span4">
+                    <div  align=center>
+                    <div  style="float: left; margin-top: 17px; margin-left: 70px;"> <a href="/login/">log in</a></div>
+                     <div  style="float: left; margin-top: 17px; margin-left: 30px;"><a href="/register/">register</a></div>
+                    </div></div>
+                {% endif %}
+                <!-- </div> -->
 		    </div>
 		  </div>
 		</div>
     	<div class="row">
-    		<div class="span8" id="maincol">
+    		<div class="span7" id="maincol">
                 {% block main %}
                 {% endblock main %}
     		</div>
-    		<div align="center" class="span4" id="rightcol">
+    		<div align="left" class="span4" id="rightcol">
     			<h3 style="padding: 20px">Popular Tags</h3>
     			<ul>
     				<div style="padding: 5px">C++</div>

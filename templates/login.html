@@ -3,7 +3,8 @@
 {% block main %}
 	<div class="page-header"><h1>Log In</h1></div>
 	<p style="color: red">Sorry, wrong password!</p>
-	<form action="" method="POST">
+	<form action="" method="GET">
+		{% csrf_token %}
 		<label for="login">Login</label><input type="text" name="login" id="login">
 		<label for="pass">Password</label><input type="password" name="pass" id="pass">
 		<label for="register"></label><input type="submit" name="register" id="register" value="Log in!">
