@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-urlpatterns = patterns('app-ask.views',
+urlpatterns = patterns('app.views',
 	url(r'^$', 'index', name='index'),
 	url(r'^register/$', 'register', name='register'),
 	url(r'^tag/(?P<tag>\w+)/$', 'tag', name='tag'),
