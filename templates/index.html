@@ -6,7 +6,7 @@
 	{% else %}
 		<div class="page-header"><h1>Main page</h1></div>
 	{% endif %}
-	{% for i in "qweasd" %}
+	{% for question in questions %}
 		<div class="question row">
 			<div align=center class="question__left">
 				<img src="http://lorempixel.com/90/90">
@@ -19,10 +19,13 @@
 				</div>
 			</div>
 			<div class="question__right">
-				<h5><a href="/">Question</a></h5>
-				<p style="margin-top: 9px;">Lorem pixel dolor sit amet</p>
-				<a href="/">Comment</a> Tags: a, b, c, d
-
+				<h5><a href="{% url 'tag' question.id %}">{{ question.title }}</a></h5>
+				<p style="margin-top: 9px;">{{ question.content }}</p>
+				<a href="/">Comment</a>
+				{% for tag in question.tags %}
+					<a href="/">{{ tag }}</a>
+				{% endfor %}
+				<div>{{ question.created|date:"d/m/y" }}</div>
 			</div>
 		</div>
 	{% endfor %}
