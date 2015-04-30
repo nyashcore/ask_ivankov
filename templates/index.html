@@ -13,18 +13,18 @@
 				<div class="btn-toolbar">
 			  <div class="btn-group">			 
 			    <a class="btn" href="#">-</a>
-			    <a class="btn" href="#" disabled>5</a>
+			    <a class="btn" href="#" disabled>{{ question.rating }}</a>
 			    <a class="btn" href="#">+</a>
 			  </div>
 				</div>
 			</div>
 			<div class="question__right">
-				<h5><a href="{% url 'tag' question.id %}">{{ question.title }}</a></h5>
-				<p style="margin-top: 9px;">{{ question.content }}</p>
+				<h5><a href="{% url 'tag' question.id %}">{{ question }}</a></h5>
+				<p style="margin-top: 9px;">{{ question.text }}</p>
 				<a href="/">Comment</a>
-				{% for tag in question.tags %}
+				<!-- {% for tag in question.tags %}
 					<a href="/">{{ tag }}</a>
-				{% endfor %}
+				{% endfor %} -->
 				<div>{{ question.created|date:"d/m/y" }}</div>
 			</div>
 		</div>

@@ -5,6 +5,7 @@ from django.template.loader import get_template
 from django.template import Context
 from django.http import HttpResponse, Http404
 import json, datetime
+from app.models import Question
 
 questions = [
 	{'id': 1, 'title': u'Как на луну', 'content': u'читай тут ->',
@@ -16,7 +17,7 @@ questions = [
 ]
 def index(request):
 	context = {
-		'questions': questions
+		'questions': Question.objects.popular()[:10]
 	}
 	return render(request, 'index.html', context)
 def register(request):
